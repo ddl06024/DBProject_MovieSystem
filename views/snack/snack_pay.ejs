@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>snack_pay</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">  
+    <script type="text/javascript">
+
+        function price_check(Object) {
+            var allprice = document.getElementById("allprice").value;
+            var point = document.getElementById("point").innerText;
+            var price = allprice-point;
+            if (confirm("결제 가격이" + price + "맞습니까?")) {
+                alert("결제를 완료하였습니다");
+              // document.getElementsByName("myform").submit();
+              return true;
+        
+            } else {
+                alert('취소되었습니다.');
+                return false;
+               
+            }
+
+        }
+    </script>
+    <style>
+        body {
+            background: #E9E9E9;
+        }
+
+        #TOP {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 165px;
+            background: #000090 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+            #TOP > #TITLE {
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+                #TOP > #TITLE > #FIRST {
+                    position: absolute;
+                    left: 1586px;
+                    width: 140px;
+                }
+
+                #TOP > #TITLE > #SECOND {
+                    position: absolute;
+                    left: 1760px;
+                    width: 129px;
+                }
+    </style>
+    <style>
+        #title {
+            position: absolute;
+            top: 218px;
+            left: 151px;
+            width: 284px;
+            height: 50px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #CENTER {
+            position: absolute;
+            top: 300px;
+            left: 245px;
+            width: 1440px;
+            height: 735px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #bx1 {
+            position: absolute;
+            top: 335px;
+            left: 285px;
+            width: 1053px;
+            height: 340px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx1 > #bx1_bx1 {
+            position: absolute;
+            width: 1053px;
+            height: 50px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+
+        }
+
+        #bx1_bx1 > #bx1_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx1_bx2 {
+            position: absolute;
+            top: 52px;
+            width: 1053px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx1_bx2 > #bx1_bx2_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx1_bx2 > #bx1_cb1_la {
+            position: absolute;
+            top: 5px;
+            left: 150px;
+        }
+        #bx1_bx2 > #bx1_cb2_la {
+            position: absolute;
+            top: 5px;
+            left: 400px;
+        }
+    </style>
+    <style>
+        #bx2 {
+            position: absolute;
+            top: 676px;
+            left: 285px;
+            width: 1053px;
+            height: 325px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2 > #bx2_bx2 {
+            position: absolute;
+            width: 1053px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2_bx2 > #bx2_bx2_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx2_bx2 > #bx2_cb1_la {
+            position: absolute;
+            top: 5px;
+            left: 150px;
+        }
+
+        #bx2_bx2 > #bx2_cb2_la {
+            position: absolute;
+            top: 5px;
+            left: 320px;
+        }
+
+        #bx2_bx2 > #bx2_cb3_la {
+            position: absolute;
+            top: 5px;
+            left: 490px;
+        }
+    </style>
+    <style>
+        #bx4 {
+            position: absolute;
+            top: 335px;
+            left: 1340px;
+            width: 310px;
+            height: 666px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info1 {
+            position: relative;
+            top: 230px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info2 {
+            position: relative;
+            top: 270px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info3 {
+            position: absolute;
+            top: 310px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info4 {
+            position: absolute;
+            top: 350px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+
+        #bt_be {
+            position: absolute;
+            top: 590px;
+            left: 12px;
+            width: 135px;
+            height: 50px;
+            background: #3BA1D5 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+            text-align: center;
+            font: normal normal bold 30px/35px NanumSquareRound;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        #bt_ne {
+            position: absolute;
+            top: 590px;
+            left: 165px;
+            width: 135px;
+            height: 50px;
+            background: #3BA1D5 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+            text-align: center;
+            font: normal normal bold 30px/35px NanumSquareRound;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+        .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+            }
+            .head_icon > span:nth-child(1){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(2){
+                color:#fac042;
+            }
+            .head_icon > span:nth-child(3){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(4){
+                color:#fac042;
+            }
+        </style>
+    </head>
+    <body>
+        <header class ="TOP">
+            <div class="m-4">
+                <a class="head_icon" href="/" style="text-decoration: none;">
+                    <span>G</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>X</span>
+                </a>
+            </div>
+        <div class="TITLE">
+            <div class ="FIRST" type ="button" onclick="Toregister()">예약하기</div>
+            <script type="text/javascript">
+            function Toregister(){
+                location.href = "/reservation2";
+            }
+            </script>
+            <!-- <a id ="FIRST2" href = "/mypage/<%= currentUser.USER_ID %>">마이페이지</a> -->
+            <div class="FIRST2" type ="button" onclick="Tomypage()">마이페이지</div>
+            <script type="text/javascript">
+             function Tomypage(){
+                 location.href = "/mypage/<%= currentUser.USER_ID %>";
+             }
+             </script>
+              <div class ="FIRST1" type ="button" onclick="Tosnacklist()">스낵구매</div>
+              <script type="text/javascript">
+              function Tosnacklist(){
+                  location.href = "/snack/<%= currentUser.USER_ID %>";
+              }
+              </script>
+            <div class="SECOND" type ="button" onclick="Tologin()">로그아웃</div>
+            <script type="text/javascript">
+                function Tologin(){
+                    location.href = "/logout";
+                  }
+            </script> 
+        </div>
+     </header>
+    
+        </script> 
+    <div id="CENTER">
+        
+    </div>
+    <form name = 'pay' onsubmit="return price_check(this)" method ="post">
+    <div id="bx1">
+        <div id="bx1_bx1">
+            <div id="bx1_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #FFFFFF;">결제</div>
+        </div>
+        <div id="bx1_bx2" style="font-family: NanumSquareRound; font-weight: bold; font-size: 30px; color: #000000;">
+            <div id="bx1_bx2_tx1">할인선택</div>
+            <% if ( point.BALANCE_AMOUNT == 0 ) { %> 
+            <label id="bx1_cb1_la"><input id="bx1_bx2_cb1"type="radio" name="discount" value="Y" style="width: 28px; height: 28px;" disabled="disabled"> 포인트차감</label>
+            <label id="bx1_cb2_la"><input id="bx1_bx2_cb1"type="radio" name="discount" value="N" style="width: 28px; height: 28px;"checked="checked"> 안함</label>
+            <span class="mt-3" style="position: absolute;top: 65px;margin-left: 10px;">사용할 포인트가 없습니다 !</span>
+           
+           
+            <input  type ="hidden" id ="포인트금액"style="position: absolute;top: 65px; left: 170px;" value=<%= point.BALANCE_AMOUNT %> >
+            <input  type ="hidden" name ="BALANCE_AMOUNT" value=<%= point.BALANCE_AMOUNT %> >
+           
+            <input  type ="hidden"  min ="0" type="text" onkeyup='printpoint()' style="position: absolute;top: 170px; height: 30px; margin-left: 10px;" id = "used_point" name="used_point">
+            <input type ="hidden"  id='point' style="position: absolute;top: 220px; margin-left: 10px;">
+           
+            <input name = "balancepoint" type = "hidden" value=<%= point.BALANCE_AMOUNT %> >
+           <% } else { %> 
+            <label id="bx1_cb1_la"><input onchange="setDisplay()" id="bx1_bx2_cb1"type="radio" name="discount" value="Y" style="width: 28px; height: 28px;" checked> 포인트차감</label>
+            <label id="bx1_cb2_la"><input onchange="setDisplay()" id="bx1_bx2_cb2"type="radio" name="discount" value="N" style="width: 28px; height: 28px;"> 안함</label>
+            <span id="잔여포인트" class="mt-3" style="position: absolute;top: 65px;margin-left: 10px;">잔여 포인트:</span>
+            <span id ="포인트금액"style="position: absolute;top: 65px; left: 170px;"><%= point.BALANCE_AMOUNT %></span>
+            <input name = "balancepoint" type = "hidden" value=<%= point.BALANCE_AMOUNT %> >
+            <script>
+                function setDisplay(){
+                    if(document.getElementById('bx1_bx2_cb2').checked){
+                        document.getElementById("잔여포인트").style.display = "none"; // Hide
+                        document.getElementById("포인트금액").style.display = "none"; // Hide
+                        document.getElementById("포인트안내").style.display = "none"; // Hide
+                        document.getElementById("used_point").style.display = "none"; // Hide
+                        document.getElementById("포인트안내2").style.display = "none"; // Hide
+                    }
+                    else{
+                        document.getElementById("잔여포인트").style.display = "block"; // show
+                        document.getElementById("포인트금액").style.display = "block"; 
+                        document.getElementById("포인트안내").style.display = "block"; 
+                        document.getElementById("used_point").style.display = "block"; 
+                        document.getElementById("포인트안내2").style.display = "block"; 
+                    }
+                }
+            </script>
+            <input  type ="hidden" name ="BALANCE_AMOUNT" value=<%= point.BALANCE_AMOUNT %> >
+            <span id ="포인트안내" style="position: absolute;top: 120px;margin-left: 10px;">사용할 포인트를 입력하세요</span>
+            <input min ="0" type="text" onkeyup='printpoint()' style="position: absolute;top: 170px; height: 30px; margin-left: 10px;" id = "used_point" name="used_point">
+            <div id='point' style="position: absolute;top: 220px; margin-left: 10px;"></div>
+            <div id ="포인트안내2" style="position: absolute;top: 220px; left: 200px"> 포인트를 사용합니다. </div>
+            
+            <% } %> 
+           
+            <script>
+                function printpoint(){
+                const point = document.getElementById('used_point').value;
+                document.getElementById("point").innerText = point;
+                }
+            </script>
+        </div>
+        </div>
+    </div>
+
+    <div id="bx2">
+        <div id="bx2_bx2" style="font-family: NanumSquareRound; font-weight: bold; font-size: 30px; color: #000000;">
+            <div name ="fm" id="bx2_bx2_tx1">결제선택</div>
+            <label id="bx2_cb1_la"><input id="bx2_bx2_cb1" type="radio" onclick="javascript:getPayway(event)" name="way" value="카드결제" style="width: 28px; height: 28px;" checked> 카드결제</label>
+            <label id="bx2_cb2_la"><input id="bx2_bx2_cb2" type="radio" onclick="javascript:getPayway(event)" name="way" value="계좌이체" style="width: 28px; height: 28px;"> 계좌이체</label>
+        
+        </div>
+        <script>
+            function getPayway(event) {
+              if(confirm(event.target.value + '로 결제하시겠습니까?')) {
+                alert('결제 방법이 선택되었습니다.');
+              }
+              else {
+                alert('취소하였습니다.');
+              }
+            }
+          </script>
+    </div>
+    <div id="bx4">
+        <table width = "200px" border="1px solid #707070;" style="position: absolute; top:50px; left: 30px">
+            <tr class = table1 style="height: 34px;">
+                <th >이름</th>
+            </tr>
+            <% test2.forEach(function(item,index){ %>     
+            <tr class = table2 style="height: 50px; font-size: 20px;" align ="center">
+                <th> <%= item.SNACK_NAME %> </th>
+                <input type ="hidden" name ="num" value=<%= item.SNACK_NUM %> >
+            <% }); %>
+            </tr>
+        </table>
+        <table width = "70px" border="1px solid #707070;" style="position: absolute; top:50px; left: 230px">
+            <tr class = table1 style="height: 34px;">
+                <th >수량</th>
+            </tr>
+            <% test1.forEach(function(item,index){ %>     
+            <tr class = table2 style="height: 50px;" align ="center">
+                <th> <%= item.SNACK_COUNT %> </th>
+            <% }); %>
+            </tr>
+        </table>
+        <button id="bt_be" onclick="Toback()">이전단계</button>
+        <script type="text/javascript">
+            function Toback(){
+                location.href ="/snack/snack_bag/<%= currentUser.USER_ID %>";
+            }
+        </script>  
+        
+        <% test3.forEach(function(item,index){ %>
+            <input type="hidden"  name ="allprice" id = "allprice" value=<%= item.A %> >
+        <% }); %>
+         <input type = "hidden" id = "endprice">   
+        <button id="bt_ne" type ="submit" >다음단계</button> 
+      
+        
+        </form>   
+    </div>
+</body>
+
+</html>

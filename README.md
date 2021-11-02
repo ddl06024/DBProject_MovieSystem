@@ -1,1 +1,2 @@
-# DBProject_MovieSystem
+# 데이터베이스 설계
+## 영화관 예매 시스템 

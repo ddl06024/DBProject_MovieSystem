@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+		<title>login</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> 
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <style>
+            body {
+                    background: #E9E9E9
+            }
+            #CENTER{
+                margin-top: 50px;
+                position: absolute;
+                top: 270px;
+                left: 600px;
+                width: 740px;
+                height: 410px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+            
+            #CENTER >#CENTER_ID > label{
+                position: absolute;
+                left: 180px;
+                width: 150px;
+                height: 34px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+            #CENTER >#CENTER_PASSWORD > label{
+                position: absolute;
+                left: 180px;
+                width: 150px;
+                height: 34px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+            /*
+            #CENTER  > p{
+                position: absolute;
+                left: 180px;
+                width: 150px;
+                height: 34px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }*/
+            #CENTER > #CENTER_ID > .input-group > input {
+                position: absolute;
+                left: 350px;
+                width: 200px;
+                height: 50px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+            #CENTER > #CENTER_PASSWORD > .input-group > input {
+                position: absolute;
+                left: 350px;
+                width: 200px;
+                height: 50px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+        </style>
+        <style>
+            button{
+                position: absolute;
+                top: 320px;
+                width: 128px;
+                height: 50px;
+                background: #A1A1A1 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+            .input-group > #id_errors{
+                position: absolute;
+                left: 350px;
+                top: 150px;
+            }
+            .input-group > #password_errors{
+                position: absolute;
+                left: 350px;
+                top: 240px;
+            }
+            .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+            }
+            .head_icon > span:nth-child(1){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(2){
+                color:#fac042;
+            }
+            .head_icon > span:nth-child(3){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(4){
+                color:#fac042;
+            }
+        </style>
+    </head>
+    <body>
+        <header class ="TOP">
+            <div class="m-4">
+                <a class="head_icon" href="/" style="text-decoration: none;">
+                    <span>G</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>X</span>
+                </a>
+            <div>
+        </header>
+        <div class="title" style=" position: absolute;top: 218px; left: 151px; width: 284px; height: 50px;">로그인</div>
+        <form class="row g-3 needs-validation"action="/login" method="post" novalidate>
+            <div id="CENTER">
+                <div class="col-md-4 d-flex" id="CENTER_ID">
+                    <label for="validationCustomUsername" class="form-label"style="position: absolute; top: 100px;">아이디</label>
+                    <div class="input-group has-validation">
+                        <input type="text" class="form-control <%= (errors.username)?'is-invalid':'' %>"style="position: absolute; top: 100px;" name="username" required>
+                        <% if(errors.username){ %>
+                            <span class="invalid-feedback" id="id_errors"><%= errors.username %></span>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" id="CENTER_PASSWORD">
+                    <label for="validationCustomUsername" class="form-label" style="position: absolute; top: 190px;">비밀번호</label>
+                    <div class="input-group has-validation">
+                        <input type="password" class="form-control <%= (errors.password)?'is-invalid':'' %>" style="position: absolute; top: 190px;" name="password" required>
+                        <% if(errors.password){ %>
+                            <span class="invalid-feedback" id="password_errors"><%= errors.password %></span>
+                        <% } %>
+                    </div>
+                </div>
+                <% if(errors.message){ %>
+                    <div class="invalid-feedback d-block" style="position: absolute;left: 300px;top: 280px;"><%= errors.message %></div>
+                <% } %>
+                <% if(errors.login_need){ %>
+                    <div class="invalid-feedback d-block" style="position: absolute;left: 300px;top: 280px;"><%= errors.login_need %></div>
+                <% } %>
+                <button type="button" style="left:220px;" onclick="Toregister()">회원가입</button>
+                <script type="text/javascript">
+                function Toregister(){
+                    console.log('asdfasdf');
+                    location.href="/users/register";
+                }
+                </script>
+                <button style="left:410px;" type="submit">로그인</button>
+            </div> 
+            <!--
+            <div id = "CENTER">
+                <div class="input-group has-validation">
+                    <p for="validationCustomUsername" style="position: absolute; top: 100px;">아이디</p>
+                    <input type ="text" class="form-control" name="username">
+                    <div class="invalid-feedback">
+                        <% if(errors.username){ %>
+                            <span><%= errors.username %></span>
+                        <% } %>
+                    </div>
+                </div>
+                <p style="position: absolute; top: 190px;">비밀번호</p>
+                <input type ="password" style="position: absolute; top: 210px;" name="password">
+                <div class="invalid-feedback">
+                    <% if(errors.password){ %>
+                        <span><%= errors.password %></span>
+                    <% } %>
+                </div>
+                <button style="left:220px;" onclick="Toregister()">회원가입</button>
+                <script type="text/javascript">
+                function Toregister(){
+                    location.href="/users/register"
+                }
+                </script>
+               
+                <button style="left:410px;" type="submit">로그인</button>
+            
+            </div>—>
+        </form>
+    </body>
+</html>

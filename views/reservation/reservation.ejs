@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>reserve</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <style>
+        body {
+            background: #E9E9E9;
+        }
+
+        #TOP {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 165px;
+            background: #000090 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+            #TOP > #TITLE {
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+                #TOP > #TITLE > #FIRST {
+                    position: absolute;
+                    left: 1586px;
+                    width: 140px;
+                }
+
+                #TOP > #TITLE > #SECOND {
+                    position: absolute;
+                    left: 1760px;
+                    width: 129px;
+                }
+    </style>
+    <style>
+        #title {
+            position: absolute;
+            top: 218px;
+            left: 151px;
+            width: 284px;
+            height: 50px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #CENTER {
+            position: absolute;
+            top: 300px;
+            left: 245px;
+            width: 1440px;
+            height: 735px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #bx1 {
+            position: absolute;
+            top: 335px;
+            left: 285px;
+            width: 380px;
+            height: 430px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx1 > #bx1_bx1 {
+            position: absolute;
+            width: 379px;
+            height: 50px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+
+        }
+
+        #bx1_bx1 > #bx1_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx1_bx2 {
+            position: absolute;
+            top: 52px;
+            width: 379px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx1_bx2 > #bx1_bx2_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+        .movie_title{
+            margin-top: 50px;
+        }
+    </style>
+    <style>
+        #bx2 {
+            position: absolute;
+            top: 335px;
+            left: 666px;
+            width: 350px;
+            height: 430px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2 > #bx2_bx1 {
+            width: 349px;
+            height: 50px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2_bx1 > #bx2_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx2_bx2 {
+            position: absolute;
+            top: 52px;
+            width: 349px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2_bx2 > #bx2_bx2_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx2_tx1 {
+            position: absolute;
+            top: 120px;
+            left: 10px;
+        }
+
+        #bx2_tx2 {
+            position: absolute;
+            top: 165px;
+            left: 10px;
+        }
+    </style>
+    <style>
+        #bx3 {
+            position: absolute;
+            top: 335px;
+            left: 1016px;
+            width: 322px;
+            height: 430px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx3 > #bx3_bx1 {
+            width: 322px;
+            height: 50px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+
+        }
+
+        #bx3_bx1 > #bx3_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx3_bx2 {
+            position: absolute;
+            top: 52px;
+            width: 322px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx3_bx2 > #bx3_bx2_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #date {
+            position: absolute;
+            top: 120px;
+            left: 10px;
+            font: normal normal bold 30px/35px NanumSquareRound;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #bx4 {
+            position: absolute;
+            top: 335px;
+            left: 1340px;
+            width: 310px;
+            height: 666px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info1 {
+            position: absolute;
+            top: 230px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: black;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info2 {
+            position: absolute;
+            top: 270px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: black;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info3 {
+            position: absolute;
+            top: 310px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: black;
+            opacity: 1;
+        }
+
+        #bx4 > #bx4_info4 {
+            position: absolute;
+            top: 350px;
+            left: 20px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 0px;
+            color: black;
+            opacity: 1;
+        }
+
+        #bt_reserve {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            opacity: 1;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid black;
+            opacity: 1;
+            width: 136px;
+            height: 51px;
+            position: absolute;
+            top: 570px;
+            left: 85px;
+        }
+        #TITLE{
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+            #TITLE > #FIRST1{
+                position: absolute;
+                left: 1218px;
+                width: 140px;
+            }
+            #TITLE > #FIRST2{
+                position: absolute;
+                left: 1392px;
+                width: 160px;
+            }
+            #TITLE > #FIRST{
+                position: absolute;
+                left: 1586px;
+                width: 140px;
+            }
+            #TITLE > #SECOND{
+                position: absolute;
+                left: 1760px;
+                width: 129px;
+            }
+            .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+            }
+            .head_icon > span:nth-child(1){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(2){
+                color:#fac042;
+            }
+            .head_icon > span:nth-child(3){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(4){
+                color:#fac042;
+            }
+        #bx5_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+    </style>
+    <style>
+        #bx5 {
+            position: absolute;
+            top: 765px;
+            left: 285px;
+            width: 730px;
+            height: 236px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx5 > #bx5_bx1 {
+            width: 729px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx5_bx1 > #bx5_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+        /* 극장명
+        #bx5_tx1 {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+        }*/
+
+        /* 상영 시간표 css
+        #bx5_tx2 {
+            position: relative;
+            top: 30px;
+        }
+        #bx5 > #bx5_bt {
+            position: absolute;
+            top: 180px;
+            left: 20px;
+        }
+        */
+    </style>
+    <style>
+        #bx6 {
+            position: absolute;
+            top: 765px;
+            left: 1016px;
+            width: 322px;
+            height: 236px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx6 > #bx6_bx1 {
+            width: 321px;
+            height: 50px;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx6_bx1 > #bx6_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx6_tx1 {
+            position: absolute;
+            top: 65px;
+            left: 20px;
+        }
+
+        #bx6_tx2 {
+            position: absolute;
+            top: 150px;
+            left: 20px;
+        }
+        #bx6_bt1 {
+            position: absolute;
+            top: 110px;
+            left: 20px;
+        }
+
+        #bx6_bt2 {
+            position: absolute;
+            top: 190px;
+            left: 20px;
+        }
+    </style>
+</head> 
+<body>
+    <div id="app">
+        <header class ="TOP">
+            <div class="m-4">
+                <a class="head_icon" href="/" style="text-decoration: none;">
+                    <span>G</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>X</span>
+                </a>
+            </div>
+            <div id="TITLE">
+                <div id ="FIRST" type ="button" onclick="Toregister()">예약하기</div>
+                <script type="text/javascript">
+                function Toregister(){
+                    location.href = "/reservation2";
+                }
+                </script>
+                <!-- <a id ="FIRST2" href = "/mypage/<%= currentUser.USER_ID %>">마이페이지</a> -->
+                <div id="FIRST2" type ="button" onclick="Tomypage()">마이페이지</div>
+                <script type="text/javascript">
+                 function Tomypage(){
+                     location.href = "/mypage/<%= currentUser.USER_ID %>";
+                 }
+                 </script>
+                  <div id ="FIRST1" type ="button" onclick="Tosnacklist()">스낵구매</div>
+                  <script type="text/javascript">
+                  function Tosnacklist(){
+                      location.href = "/snack/<%= currentUser.USER_ID %>";
+                  }
+                  </script>
+                <div id="SECOND" type ="button" onclick="Tologin()">로그아웃</div>
+                <script type="text/javascript">
+                    function Tologin(){
+                        location.href = "/logout";
+                      }
+                </script> 
+            </div>
+         </header>
+        <div id="title">예매하기
+        </div>
+        <div id="CENTER">
+        </div>
+        <form action="/reservation2/reservate" method="post" @submit="submitWithValidation(event)">
+            <div id="bx1">
+                <div id="bx1_bx1">
+                    <div id="bx1_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #FFFFFF;">영화선택</div>
+                </div>
+                <div id="bx1_bx2" style="font-family: NanumSquareRound; font-weight: bold; font-size: 30px; color: #000000;">
+                    <div id="bx1_bx2_tx1">예매순</div>
+                    <div class="movie_title" style="overflow: scroll; width: 380; height: 330px;">
+                        <% if(!movie_info){ %>
+                            <% movies.forEach(function(movie){ %>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="movie_num" v-model="movie_num" value="<%= movie.MOVIE_NUM %>" id="flexRadioDefault">
+                                    <label class="form-check-label" for="flexRadioDefault">
+                                    <%= movie.MOVIE_TITLE %>
+                                    </label>
+                                </div>
+                            <% }) %>
+                        <% } else { %>
+                            <% movies.forEach(function(movie){ %>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="movie_num" v-model="movie_num" value="<%= movie.MOVIE_NUM %>" id="flexRadioDefault">
+                                    <label class="form-check-label" for="flexRadioDefault<%= movie.MOVIE_NUM %>">
+                                    <%= movie.MOVIE_TITLE %>
+                                    </label>
+                                </div>
+                            <% }) %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div id="bx2">
+                <div id="bx2_bx1">
+                    <div id="bx2_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #FFFFFF;">극장선택</div>
+                </div>
+                <div id="bx2_bx2" style="font-family: NanumSquareRound; font-weight: bold; font-size: 30px; color: #000000;">
+                    <div id="bx2_bx2_tx1">전체극장</div>
+                </div>
+                <div id="bx2_tx1" style="font-family: NanumSquareRound; font-size: 25px; color: #0909FF;">동대문구</div>
+                <div id="bx2_tx2" style="font-family: NanumSquareRound; font-size: 25px; color: #000000;">GIGABOX-청량리</div>
+            </div>
+            <div id="bx3">
+                <div id="bx3_bx1">
+                    <div id="bx3_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #FFFFFF;">날짜선택</div>
+                </div>
+                <div id="bx3_bx2" style="font-family: NanumSquareRound; font-weight: bold; font-size: 30px; color: #000000;">
+                    <div id="bx3_bx2_tx1">2021년</div>
+                </div>
+                <p id="date">
+                    <% if(!date){ %>
+                        <input type="date" name="date" min='currentDate' max="2021-12-31" v-model="date">
+                    <% } else { %>
+                        <input type="date" name="date" min='currentDate' max="2021-12-31" v-model="date" value="<%= date %>">
+                    <% } %>
+                    <!--
+                    <span class="invalid-feedback d-block" v-if="errors.movie_num" style="font-size: 15px;">{{ errors.movie_num }}</span>
+                    <span class="invalid-feedback d-block" v-if="errors.date" style="font-size: 15px;">{{ errors.date }}</span>
+                    -->
+                </p>
+                <button class="btn btn-outline-secondary" type="submit" onclick="confirm('상영 일정을 조회 하시겠습니까?')"style="position: absolute; top:350px;">상영일정 조회</button>
+                <!--
+                <form id="date">
+                    <p><input type="date" min='currentDate' max="2021-05-31"></p>
+                </form>
+                -->
+            </div>
+        </form>
+        <form action="/reservation2/reservate2" method="post" @submit="submitWithValidation2(event)">
+            <% if(movie_info && date){ %>
+                <input type="hidden" name="movie_num" value="<%= movie_info.MOVIE_NUM %>">
+                <input type="hidden" name="date" value="<%= date %>">
+            <% } %>
+            <div id="bx4">
+                <% if(movie_info != null ){ %>
+                    <div id="bx4_info1">영화 <%= movie_info.MOVIE_TITLE %></div>
+                <% } else { %>
+                    <div id="bx4_info1">영화</div>
+                <% }%>
+                <div id="bx4_info2">날짜 <%= date %></div>
+                <div id="bx4_info3">인원 성인 {{adults}} 청소년 {{kids}}</div>
+                <div id="bx4_info4">좌석</div>
+                <button id="bt_reserve" onclick="confirm('예약하시겠습니까?')">예약하기</button>
+            </div>
+            <div id="bx5" style="overflow: scroll;">
+                <div id="bx5_bx1">
+                    <div id="bx5_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;">상영시간표</div>
+                </div>
+                <div class="mt-2" id="bx5_tx1_2" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;">극장명</div>
+                <div style="margin-top: 30px;">   
+                    <% boxs.forEach(function(box){ %>
+                        <% var check = false; %>
+                        <% schedules.forEach(function(schedule){ %>
+                            <% if(box.SCREEN_BOX_NUM == schedule.SCREEN_BOX_NUM){%>
+                                <% check = true; %>
+                            <% } %>
+                        <% }) %>
+                        <% if(check == true){ %>
+                            <div class="ms-3 mt-2" id="bx5_tx2" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;"><%=box.SCREEN_BOX_NAME %></div>
+                            <% schedules.forEach(function(schedule){ %>
+                                <% if(box.SCREEN_BOX_NUM == schedule.SCREEN_BOX_NUM){%>
+                                    <div id="bx5_bt" class="btn-group ms-3" role="group" aria-label="Basic radio toggle button group" >
+                                        <input type="radio" class="btn-check" name="schedule" v-model="movie_box" id="<%= schedule.SCREEN_SCHEDULE_NUM %>" value="<%= schedule.SCREEN_SCHEDULE_NUM %>" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="<%= schedule.SCREEN_SCHEDULE_NUM %>" style="font-size:20px; font-family: NanumGothicCoding; font-weight: 800; "><%= schedule.SCREEN_START_TIME %></label>
+                                    </div>
+                                <% } %>
+                            <% }) %>        
+                        <% } %>
+                    <% }) %>
+                </div> 
+            </div>
+            <div id="bx6">
+                <div id="bx6_bx1">
+                    <div id="bx6_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;">인원선택</div> 
+                </div>
+                <% if(schedules.length != 0) { %>
+                    <div id="bx6_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;">성인</div>
+                    <div id="bx6_bt1" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                        <input type="radio" class="btn-check" name="adults" id="btnradio0" v-model="adults" value="0" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio0" style="font-family: NanumGothicCoding; font-weight: 800; ">0</label>
+            
+                        <input type="radio" class="btn-check" name="adults" id="btnradio1" v-model="adults" value="1" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio1" style="font-family: NanumGothicCoding; font-weight: 800; ">1</label>
+                        
+                        <input type="radio" class="btn-check" name="adults" id="btnradio2" v-model="adults" value="2"  autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2" style="font-family: NanumGothicCoding; font-weight: 800; ">2</label>
+                        
+                        <input type="radio" class="btn-check" name="adults" id="btnradio3" v-model="adults" value="3" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio3" style="font-family: NanumGothicCoding; font-weight: 800; ">3</label>
+
+                        <input type="radio" class="btn-check" name="adults" id="btnradio4" v-model="adults" value="4" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio4" style="font-family: NanumGothicCoding; font-weight: 800; ">4</label>
+
+                        <input type="radio" class="btn-check" name="adults" id="btnradio5" value="5" v-model="adults" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio5" style="font-family: NanumGothicCoding; font-weight: 800; ">5</label>
+
+                        <input type="radio" class="btn-check" name="adults" id="btnradio6" value="6" v-model="adults" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio6" style="font-family: NanumGothicCoding; font-weight: 800; ">6</label>
+                    </div>
+                    <div id="bx6_tx2" style="font: normal normal bold 30px/35px NanumSquareRound; color: #000000;">청소년</div>
+                    <div id="bx6_bt2" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_0" v-model="kids" value="0" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_0" style="font-family: NanumGothicCoding; font-weight: 800; ">0</label>
+
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_1" v-model="kids" value="1" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_1" style="font-family: NanumGothicCoding; font-weight: 800; ">1</label>
+                        
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_2" v-model="kids" value="2"  autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_2" style="font-family: NanumGothicCoding; font-weight: 800; ">2</label>
+                        
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_3" v-model="kids" v-model="kids" value="3" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_3" style="font-family: NanumGothicCoding; font-weight: 800; ">3</label>
+
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_4" value="4" v-model="kids" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_4" style="font-family: NanumGothicCoding; font-weight: 800; ">4</label>
+
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_5" value="5" v-model="kids" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_5" style="font-family: NanumGothicCoding; font-weight: 800; ">5</label>
+
+                        <input type="radio" class="btn-check" name="kids" id="btnradio2_6" value="6" v-model="kids" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="btnradio2_6" style="font-family: NanumGothicCoding; font-weight: 800; ">6</label>
+                    </div>
+                <%} %>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                movie_num: undefined,
+                date: undefined,
+                movie_box: undefined,
+                adults: undefined,
+                kids: undefined,
+
+                errors: {},
+                errors2: {},
+            },
+            methods: {
+                submitWithValidation(event) {
+
+                    movie_num = this.movie_num;
+                    date = this.date;
+
+                    new_errors = {}
+
+                    if(!movie_num){
+                        alert('영화를 선택해주세요')
+                        new_errors.movie_num = "영화를 선택해주세요"
+                    }
+                    else delete new_errors.movie_num
+
+                    if(!date){
+                        alert('날짜를 선택해주세요')
+                        new_errors.date = "날짜를 선택해주세요"
+                    }
+                    else delete new_errors.date
+
+                    this.errors = Object.assign({}, new_errors)
+                    var errors_length = Object.keys(new_errors).length || 0
+
+                    if(errors_length == 0){
+                        return true
+                    }
+                    else {
+                        event.preventDefault();
+                    }
+                    
+                },
+                submitWithValidation2(event){
+
+                adults = this.adults;
+                kids = this.kids;
+                movie_box = this.movie_box;
+
+                new_errors = {}
+
+                if(!movie_box){
+                    alert('상영 일정을 선택해주세요');
+                    new_errors.schedule = "상영 일정을 선택해주세요"
+                    
+                }else delete new_errors.schedule
+
+                if(!kids && !adults){
+                    alert('인원수를 선택해주세요');
+                    new_errors.people = "인원수를 선택해주세요"
+                }else if(!adults){
+                    alert('성인의 인원 수를 선택해주세요')
+                    new_errors.people= "인원수를 선택해주세요"
+                } else if(!kids){
+                    alert('어린이의 인원 수를 선택해주세요')
+                    new_errors.people= "인원수를 선택해주세요"
+                }else if(kids == 0 && adults == 0){
+                    alert('현재 인원 수가 0명입니다. 인원 수를 다시 선택해주세요')
+                    new_errors.people= "인원수를 선택해주세요"
+                }else delete new_errors.people
+
+                this.errors2 = Object.assign({}, new_errors)
+                var errors_length = Object.keys(new_errors).length || 0
+
+                if(errors_length == 0){
+                    return true
+                }
+                else {
+                    event.preventDefault();
+                }
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

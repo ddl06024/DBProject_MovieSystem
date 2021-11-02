@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+		<title>snack_bag</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+       <style>
+            body {
+                    background: #E9E9E9
+            }
+            #CENTER{ position: absolute;
+                top: 250px;
+                left: 510px;
+                width: 1260px;
+                height: 670px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+            #box{
+                width : 100px;
+                height: 30px;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 600px;
+                color: #000000;
+                font-size: 20px;
+            }
+            #TITLE{
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+            #TITLE > #FIRST1{
+                position: absolute;
+                left: 1218px;
+                width: 140px;
+            }
+            #TITLE > #FIRST2{
+                position: absolute;
+                left: 1392px;
+                width: 160px;
+            }
+            #TITLE > #FIRST{
+                position: absolute;
+                left: 1586px;
+                width: 140px;
+            }
+            #TITLE > #SECOND{
+                position: absolute;
+                left: 1760px;
+                width: 129px;
+            }
+            #NAME {
+                text-align: center;
+                width: 250px;
+                height: 50px;
+                line-height: 50px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 500px;
+                color: #000000;
+                font-size: 30px;
+                position: relative;
+                top:150px;
+                left: 152px
+            }
+            #NAME1 {
+                text-align: center;
+                width: 250px;
+                height: 50px;
+                line-height: 50px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 500px;
+                color: #000000;
+                font-size: 30px;
+                position: relative;
+                top:0px;
+                left: 200px
+            }
+            #NAME2 {
+                text-align: center;
+                width: 250px;
+                height: 50px;
+                line-height: 50px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 500px;
+                color: #000000;
+                font-size: 30px;
+                position: relative;
+                top:150px;
+                left: 152px
+            }
+            #allprice {
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 500px;
+                color: #000000;
+                font-size: 30px;
+                position: absolute;
+                top: 500px;
+                left: 950px
+            }
+            
+            .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+            }
+            .head_icon > span:nth-child(1){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(2){
+                color:#fac042;
+            }
+            .head_icon > span:nth-child(3){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(4){
+                color:#fac042;
+            }
+        </style>
+    </head>
+    <body>
+        <header class ="TOP">
+            <div class="m-4">
+                <a class="head_icon" href="/" style="text-decoration: none;">
+                    <span>G</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>X</span>
+                </a>
+            </div>
+            <div id="TITLE">
+                <div id ="FIRST" type ="button" onclick="Toregister()">예약하기</div>
+                <script type="text/javascript">
+                function Toregister(){
+                    location.href = "/reservation2";
+                }
+                </script>
+                <!-- <a id ="FIRST2" href = "/mypage/<%= currentUser.USER_ID %>">마이페이지</a> -->
+                <div id="FIRST2" type ="button" onclick="Tomypage()">마이페이지</div>
+                <script type="text/javascript">
+                 function Tomypage(){
+                     location.href = "/mypage/<%= currentUser.USER_ID %>";
+                 }
+                 </script>
+                  <div id ="FIRST1" type ="button" onclick="Tosnacklist()">스낵구매</div>
+                  <script type="text/javascript">
+                  function Tosnacklist(){
+                      location.href = "/snack/<%= currentUser.USER_ID %>";
+                  }
+                  </script>
+                <div id="SECOND" type ="button" onclick="Tologin()">로그아웃</div>
+                <script type="text/javascript">
+                    function Tologin(){
+                        location.href = "/logout";
+                      }
+                </script> 
+            </div>
+         </header>
+            <div class = "title" style="position: absolute;top: 218px;left: 151px; width: 304px; height: 50px;">스낵 장바구니</div>
+            <div id = "CENTER"> 
+                <table width = "600px" border="1px solid #707070;" style="position: absolute; top:100px; left: 150px">
+                    <tr class = table1 style="height: 34px;">
+                        <th style="width: 250px;">스낵이름</th>
+                        <th style="width: 250px;">스낵가격</th>
+                    </tr>
+                    <% test2.forEach(function(item,index){ %>     
+                    <tr class = table2 style="height: 50px;" align ="center">
+                        <th> <%= item.SNACK_NAME %> </th>
+                        <th> <%= item.SNACK_PRICE %> </th>
+                    <% }); %>
+                    </tr>
+                </table>
+                <table width = "350px" border="1px solid #707070;" style="position: absolute; top:100px; left: 750px">
+                        <tr class = table1 style="height: 34px;">
+                            <th style="width: 250px;">수량</th>
+                            <th style="width: 250px;">총가격</th>
+                        </tr>
+                        <% test1.forEach(function(item,index){ %>     
+                        <tr class = table2 style="height: 50px;" align ="center">
+                            <th> <%= item.SNACK_COUNT %> </th>
+                            <th style="width: 300px;"> <%= item.SNACK_PRICE %> </th>
+                        <% }); %>
+                        </tr>
+                </table> 
+                <% test3.forEach(function(item,index){ %>
+                    <div id = allprice >합계  <%= item.A %> 원</div>
+                    <% }); %>
+             <% if(test2.length == 0)  { %>    
+            <BUTTON class="BUTTON1" onclick =" nothing()" style="position:absolute; left:1000px; top:600px; width: 200px; height: 40px;font-size: 30px; margin-top: 10px;">결제하기</BUTTON>   
+            <% } else { %>
+            <BUTTON class="BUTTON1" onclick ="Tosnackpay()" style="position:absolute; left:1000px; top:600px; width: 200px; height: 40px;font-size: 30px; margin-top: 10px;">결제하기</BUTTON>   
+            <% } %>
+            <script type="text/javascript">
+            function Tosnackpay(){
+                location.href ="/snack/snack_pay/<%= currentUser.USER_ID %>";
+            }
+            </script>    
+            <script type="text/javascript">
+                function nothing(){
+                    // 장바구니에 아무것도 없을 때
+                   alert("장바구니가 비었습니다 !");
+                }
+            </script>
+         </div>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>register</title>
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <!--vue.js-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css"/>
+       <style>
+            body {
+                background: #E9E9E9
+            }
+            .TOP {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 135n0px;
+                height: 165px;
+                background: #000090 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+            .title{
+           
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700px;
+                font-size: 50px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+            #CENTER{ 
+                position: absolute;
+                top: 270px;
+                left: 380px;
+                width: 1150px;
+                height: 900px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+            }
+                #CENTER > p{
+                    position: absolute;
+            
+                    left: 250px;
+                    text-align: left;
+                    font-family: 'NanumSquareRound',sans-serif;
+                    font-weight: 400;
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    color: #707070;
+                    opacity: 1;
+                }
+                #CENTER > input{
+                    position: absolute;
+                    left: 500px;
+                    width: 200px;
+                    height: 50px;
+                }
+            </style>
+            <style>
+                #bt_2{
+                    position: absolute;
+                    top: 730px;
+                    left: 550px;
+                    width: 150px;
+                    height: 50px;
+                    background: #A1A1A1 0% 0% no-repeat padding-box;
+                    border: 1px solid #707070;
+                    text-align: center;
+                    font-family: 'NanumSquareRound',sans-serif;
+                    font-weight: 400;
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                    opacity: 1;
+                }  
+            </style>
+            <style>
+                #bt_1{
+                    position: absolute;
+                    top:112px;
+                    left: 730px;
+                    width: 200px;
+                    height: 50px;
+                    background: #3BA1D5 0% 0% no-repeat padding-box;
+                    border: 1px solid #707070;
+                    text-align: center;
+                    font-family: 'NanumSquareRound',sans-serif;
+                    font-weight: 400;
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                    opacity: 1;
+                }
+                .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+                }
+                .head_icon > span:nth-child(1){
+                    color:#e9a719;
+                }
+                .head_icon > span:nth-child(2){
+                    color:#fac042;
+                }
+                .head_icon > span:nth-child(3){
+                    color:#e9a719;
+                }
+                .head_icon > span:nth-child(4){
+                    color:#fac042;
+                }
+              
+            </style>
+    </head>
+    <body>
+        <div id="app">
+            <header class ="TOP">
+                <div class="m-4">
+                    <a class="head_icon" href="/" style="text-decoration: none;">
+                        <span>G</span>
+                        <span>I</span>
+                        <span>G</span>
+                        <span>A</span>
+                        <span>B</span>
+                        <span>O</span>
+                        <span>X</span>
+                    </a>
+                </div>
+            </header>
+            <div class ="title" style="position: absolute;top: 218px;left: 151px;width: 284px;height: 50px;">회원가입</div>
+            <form action="/users" method="post" @submit="submitWithValidation(event)">  
+                <div id = "CENTER">
+                    <p style="position: absolute; top: 90px;">
+                        아이디
+                        <span class="invalid-feedback d-block" v-if="errors.id" style="font-size: 15px;">{{ errors.id }}</span>
+                    </p>
+                    <!--
+                         <button id ="bt_1" type="submit" style="position: absolute; top: 90px;">중복확인</button>
+                    -->
+                    <input 
+                        type ="text" 
+                        style="position: absolute; top: 90px;"
+                        id="USER_ID"
+                        name="USER_ID"
+                        v-model="user.id"
+                    >
+
+                    <p style="position: absolute; top: 180px;">
+                        이름
+                        <span class="invalid-feedback d-block" v-if="errors.name" style="font-size: 15px;">{{ errors.name }}</span>
+                    </p>
+                    <input 
+                        type ="text" 
+                        style="position: absolute; top: 180px;" 
+                        name="USER_NAME"
+                        v-model="user.name"
+                    >
+
+                    <p style="position: absolute; top: 270px;">
+                        주민등록번호
+                        <span class="invalid-feedback d-block" v-if="errors.resi_num" style="font-size: 15px;">{{ errors.resi_num }}</span>
+                    </p>
+                    <input 
+                        type ="text"
+                        style="position: absolute; top: 270px;" 
+                        name="RESIDENT_NUM"
+                        v-model="user.resi_num">
+
+                    <p style="position: absolute; top: 360px;">
+                        비밀번호
+                        <span class="invalid-feedback d-block" v-if="errors.password" style="font-size: 15px;">{{ errors.password }}</span>
+                    </p>
+                    <input 
+                        type ="password" 
+                        style="position: absolute; top: 360px;" 
+                        name="USER_PW"
+                        v-model="user.password">
+
+                    <p style="position: absolute; top: 450px;">
+                        비밀번호 확인
+                        <span class="invalid-feedback d-block" v-if="errors.password2" style="font-size: 15px;">{{ errors.password2 }}</span>
+                    </p>
+                    <input 
+                        type ="password" 
+                        style="position: absolute; top: 450px;" 
+                        name="USER_PW_CHECK"
+                        v-model="user.password2">
+
+                    <p style="position: absolute; top: 550px;">
+                        이메일
+                        <span class="invalid-feedback d-block" v-if="errors.email" style="font-size: 15px;">{{ errors.email }}</span>
+                    </p>
+                    <input
+                        type ="email" 
+                        style="position: absolute; top: 550px;" 
+                        name="EMAIL"
+                        v-model="user.email"> 
+
+                    <p style="position: absolute; top: 650px;">
+                        휴대폰 번호
+                        <span class="invalid-feedback d-block" v-if="errors.tel_num" style="font-size: 15px;">{{ errors.tel_num }}</span>
+                    </p>
+                    <input 
+                        type ="text" 
+                        style="position: absolute; top: 650px;" 
+                        name="PHONE_NUM"
+                        v-model="user.tel_num"> 
+                    <!-- <button class="btn" type="submit" id ="bt_2">회원 가입</button> -->
+                    <% if(errors.message) { %>
+                        <span class="invalid-feedback d-block" style="font-size: 15px; position: absolute; top:800px; left:500px"><%= errors.message %></span>
+                    <% }%>
+                    <button class="btn" type="submit" id ="bt_2">회원 가입</button>
+                </div>
+            </form> 
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+        <script>
+            var app = new Vue({
+                el : "#app",
+                data : {
+                    user: {
+                        id: undefined,
+                        name: undefined,
+                        resi_num: undefined,
+                        password: undefined,
+                        password2: undefined,
+                        email: undefined,
+                        tel_num: undefined,
+                    },
+                    errors: {}
+                },
+                methods: {
+                    submitWithValidation (event) {
+                        id = this.user.id
+                        name  = this.user.name
+                        resi_num = this.user.resi_num
+                        password = this.user.password
+                        password2 = this.user.password2 
+                        email = this.user.email
+                        tel_num = this.user.tel_num
+                        
+                        // error message를 반환할 객체
+                        var new_errors = {}
+                        
+                        // 정규식 선언!
+                        var test_password = /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{2,50}).{8,50}$/;
+                        var test_id = /^[a-zA-Z]+[a-z0-9A-Z]{5,15}$/;
+                        var test_email = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
+                        var test_phone = /^[0-9]{2,11}$/;
+                        var test_resi_num = /^[0-9]{12,13}$/;
+                        var test_name = /^[가-힣]{2,6}$/
+
+                        // id 확인
+                        if(!id || !test_id.test(id)) {
+                            new_errors.id = "5자리에서 15자리내의 숫자와 영문의 조합으로 id를 만들어주세요";
+                        }
+
+                        if(!name || !test_name.test(name)){
+                            new_errors.name = "6글자 내로 한글로 입력해주세요";
+                        }
+
+                        // 주민등록번호 확인
+                        if(!resi_num || !test_resi_num.test(resi_num)){
+                            new_errors.resi_num = "숫자로만 13자리 입력해주세요";
+                        }
+
+                        
+                        // password 확인
+                        if(!password || !test_password.test(password)){
+                            new_errors.password = "숫자, 특수문자 각 1회 이상, 영문은 2개 이상 사용하여 8자리 이상 입력해주세요"
+                        }
+
+                        if (!password2 || !test_password.test(password2)) {
+                            new_errors.password2 = "숫자, 특수문자 각 1회 이상, 영문은 2개 이상 사용하여 8자리 이상 입력해주세요"
+                        } else if(password != password2){
+                            new_errors.password2 = "비밀번호가 일치하지 않습니다. "
+                        }
+
+                        // email 확인
+                        if(!email || !test_email.test(email)){
+                            new_errors.email = "이메일 형식을 지켜주세요."
+                        }
+
+                        // phone 확인
+                        if(!tel_num || !test_phone.test(tel_num)){
+                            new_errors.tel_num = "숫자로만 써주세요"
+                        }
+
+                        this.errors = Object.assign({}, new_errors)
+                        var errors_length = Object.keys(new_errors).length || 0
+                        
+                        console.log(new_errors)
+                        console.log(this.errors)
+                        if (errors_length == 0) {
+                            return true
+                        } else {
+                            event.preventDefault();
+                        }
+                    }
+                }
+            })
+         </script>
+    </body>      
+</html>

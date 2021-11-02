@@ -1,0 +1,196 @@
+.TOP {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 165px;
+    background: #000090 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    }
+
+.title{
+
+    text-align: left;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 700px;
+    font-size: 50px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+.CENTER {
+               
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    overflow: auto;
+}
+.CENTER > .IMAGE{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    order: 1px solid #707070;
+    opacity: 1;
+}
+
+.CENTER > .TEXT{
+    text-align: center;
+    font-family: 'NanumSquareRound',sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.BAR {
+        position: absolute;
+        top: 167px;
+        left: 57px;
+        width: 440px;
+        height: 915px;
+        background: #DDDDDD 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        opacity: 1; 
+    }
+.BAR > .T2{ 
+        
+    left: 113px;
+    width: 370px;
+    height: 34px;
+    text-align: left;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 500px;
+    font-size: 30px;;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.T1{
+    top: 347px;
+    left: 191px;
+    height: 49px;
+    text-align: center;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 500px;
+    font-size: 45px;;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    left: -2.5px;width: 440px;padding: 15px 0px;
+    
+    background: #A1A1A1 0% 0% no-repeat padding-box;
+    border: 2px solid #000000;
+    opacity: 1;
+}
+
+.BUTTON1{
+text-align: center;
+font-family: 'NanumSquareRound',sans-serif;
+font-weight: 500px;
+color: #FFFFFF;
+opacity: 1;
+background: #3BA1D5 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 10px;
+opacity: 1;
+}
+.title1{
+    width: 140px;
+    height: 34px;
+    text-align: left;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 500px;
+    font-size: 30px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.table1{
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    width: 330px;
+    height: 50px;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 500px;
+    color: #000000;
+    font-size: 30px;
+
+}
+.table2{
+    width: 210px;
+    height: 70px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 500px;
+    color: #000000;
+    font-size: 30px;
+
+}
+.table3{
+    text-align: center;
+    width: 152px;
+    height: 50px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 600px;
+    color: #000000;
+    font-size: 30px;
+}
+
+.table4{
+    text-align: center;
+    width: 212px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 600px;
+    color: #000000;
+    font-size: 30px;
+}
+
+.table5{
+    text-align: center;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 600px;
+    color: #000000;
+    font-size: 25px;
+    border: 1px solid #FFFFFF;
+}
+
+.TITLE{
+    position: absolute;
+    top: 95px;
+    height: 34px;
+    text-align: center;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.TITLE > .FIRST1{
+    position: absolute;
+    left: 1218px;
+    width: 140px;
+}
+.TITLE > .FIRST2{
+    position: absolute;
+    left: 1392px;
+    width: 160px;
+}
+.TITLE > .FIRST{
+    position: absolute;
+    left: 1586px;
+    width: 140px;
+}
+.TITLE > .SECOND{
+    position: absolute;
+    left: 1760px;
+    width: 129px;
+}

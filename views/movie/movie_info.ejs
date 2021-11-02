@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>movie_info</title>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> 
+    <script type="text/javascript" src="/route.js"></script>
+    <style>
+        body {
+            background: #E9E9E9;
+        }
+
+        #TOP {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 165px;
+            background: #000090 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+            #TOP > #TITLE {
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+                #TOP > #TITLE > #FIRST {
+                    position: absolute;
+                    left: 1586px;
+                    width: 140px;
+                }
+
+                #TOP > #TITLE > #SECOND {
+                    position: absolute;
+                    left: 1760px;
+                    width: 129px;
+                }
+    </style>
+    <style>
+        #title {
+            position: absolute;
+            top: 218px;
+            left: 151px;
+            width: 284px;
+            height: 50px;
+            text-align: left;
+            font-family: 'NanumGothicCoding',sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #CENTER {
+            position: absolute;
+            top: 300px;
+            left: 245px;
+            width: 1440px;
+            height: 735px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #movie_title{
+            position: absolute;
+            top: 80px; left: 420px;;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            color: #707070;
+            letter-spacing: 0px;
+            text-align: left;
+
+        }
+
+        #CENTER > #outline {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: #707070;
+            opacity: 1;
+            position: absolute;
+            top: 150px; left: 400px;
+        }
+
+        #CENTER > #director {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: #707070;
+            opacity: 1;
+            position: absolute;
+            top: 200px; left: 400px;
+        }
+
+        #CENTER > #cast {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: #707070;
+            opacity: 1;
+            position: absolute;
+            top: 250px; left: 400px;
+        }
+
+        #CENTER > #rate {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: #707070;
+            opacity: 1;
+            position: absolute;
+            top: 300px; left: 400px;
+        }
+    </style>
+    <style>
+        #box_s {
+            position: absolute;
+            top: 750px;
+            left: 350px;
+            width: 1240px;
+            height: 240px;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #box_s > #sum {
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: #707070;
+            opacity: 1;
+            position: absolute;
+            top: -60px; left: 10px;
+        }
+        .body{
+            font-family: 'NanumSquareRound',sans-serif;
+            font-size: 30px;
+            color: #707070;
+            font-weight: 500;
+            top: 150px;
+        }
+        .story{
+            font-family: 'NanumSquareRound',sans-serif;
+            font-size: 25px;
+            color: #707070;
+            font-weight: 500;
+        }
+        .head_icon > span{
+            font-family: 'Oswald', sans-serif;;
+            font-weight: 700;
+            font-size: 70px;
+            color:#fad87b;
+        }
+        .head_icon > span:nth-child(1){
+            color:#e9a719;
+        }
+        .head_icon > span:nth-child(2){
+            color:#fac042;
+        }
+        .head_icon > span:nth-child(3){
+            color:#e9a719;
+        }
+        .head_icon > span:nth-child(4){
+            color:#fac042;
+        }
+    </style>
+</head> 
+    <body>
+        <header id="TOP">
+            <div class="m-4">
+                <a class="head_icon" href="/" style="text-decoration: none;">
+                    <span>G</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>X</span>
+                </a>
+            </div>
+            <div id="TITLE">
+                <div id="FIRST" type="button" onclick="Toregister()">회원가입</div>
+                <script type="text/javascript">
+                    function Toregister() {
+                        location.href = "/register";
+                    }
+                </script>
+
+                <div id="SECOND" type="button" onclick="Tologin()">로그인</div>
+                <script type="text/javascript">
+                    function Tologin() {
+                        location.href = "/login";
+                    }
+                </script>
+            </div>
+        </header>
+        <div id="title">영화정보</div>
+        <div id="CENTER">
+            <div class="poster ms-5 mt-4">
+                <img width="250"src= "<%= movie_photo.PHOTO_SRC %>"></img>
+            </div>
+            <h id="movie_title"><%= movie_info.MOVIE_TITLE %></h>
+            <div id="outline"style="display: flex;">
+                <span class="me-3">개요</span>
+                <div class="body">
+                    <% genres.forEach(function(genre){ %>
+                        <span><%= genre.GENRE_NAME %>|</span>
+                    <% }) %>
+                    <span><%= movie_info.COUNTRY %>|</span>
+                    <span><%= movie_info.RUNNING_TIME%>|</span>
+                </div>
+                <span class="body"><%= movie_info.RELEASE_DATE %></span>
+                <!--
+                <div class="me-3">
+                    <span>개요</span>
+                </div>
+                <div class="body">
+                </div>
+                -->
+            </div>
+            <div id="director">
+                <span>감독</span>
+                <span class="body"><%= movie_info.DIRECT %>  </span>
+            </div>
+            <div id="cast">
+                <span>출연</span>
+                <span class="body"><%= movie_info.ACTOR %></span>
+            </div>
+            <div id="rate">
+                <span>등급</span>
+                <span class="body"><%= movie_info.GRADE %></span>
+            </div>
+        </div>
+        <div id="box_s" style="overflow: scroll;">
+            <div id="sum">줄거리</div>
+            <span class="story p-3"><%= movie_info.STORY %></span>
+        </div>
+    </body>
+
+</html>

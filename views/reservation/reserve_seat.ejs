@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>reserve</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css" />
+    <script type="text/javascript" src="/route.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <style>
+        body {
+            background: #E9E9E9;
+        }
+
+        #TOP {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 165px;
+            background: #000090 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+            #TOP > #TITLE {
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+                #TOP > #TITLE > #FIRST {
+                    position: absolute;
+                    left: 1586px;
+                    width: 140px;
+                }
+
+                #TOP > #TITLE > #SECOND {
+                    position: absolute;
+                    left: 1760px;
+                    width: 129px;
+                }
+    </style>
+    <style>
+        #title {
+            position: absolute;
+            top: 218px;
+            left: 151px;
+            width: 284px;
+            height: 50px;
+            text-align: left;
+            font-family: 'NanumSquareRound',sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #CENTER {
+            position: absolute;
+            top: 300px;
+            left: 245px;
+            width: 1440px;
+            height: 735px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+    </style>
+    <style>
+        #bx1 {
+            position: absolute;
+            top: 335px;
+            left: 285px;
+            width: 1053px;
+            height: 550px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #seats {
+          position: absolute;
+          left: 400px;
+          top: 550px;
+          margin: 10px;
+          width: 30px;
+          height: 30px;
+          border: 1px solid #707070;
+          opacity: 1;
+        }
+
+        #bx1 > #bx1_bx1 {
+            position: absolute;
+            width: 1053px;
+            height: 50px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx1_bx1 > #bx1_bx1_tx1 {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #bx1 > #bx1_bx2 {
+            position: absolute;
+            top: 90px;
+            left: 190px;
+            width: 650px;
+            height: 50px;
+            text-align: center;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+                    .bx4_info5 {
+                        position: absolute;
+                        top: 220px;
+                        font-family: 'NanumSquareRound',sans-serif;
+                        font-weight: bold;
+                        font-size: 25px;
+                        letter-spacing: 0px;
+                        color: #707070;
+                        opacity: 1;
+                    }
+
+    </style>
+    <style>
+        #bx2 {
+            position: absolute;
+            top: 876px;
+            left: 285px;
+            width: 1053px;
+            height: 115px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2 > #bx2_bx1 {
+            position: absolute;
+            top: 40px;
+            left: 350px;
+            width: 27px;
+            height: 27px;
+            background: #575795 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2 > #bx2_tx1 {
+            position: absolute;
+            top: 40px;
+            left: 400px;
+        }
+
+        #bx2 > #bx2_bx2 {
+            position: absolute;
+            top: 40px;
+            left: 550px;
+            width: 27px;
+            height: 27px;
+            background: #FF6F00 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        #bx2 > #bx2_tx2 {
+            position: absolute;
+            top: 40px;
+            left: 600px;
+        }
+    </style>
+    <style>
+        #bx4 {
+            position: absolute;
+            top: 335px;
+            left: 1360px;
+            width: 310px;
+            height: 666px;
+            background: #A1A1A1 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+            #bx4 > #bx4_info1 {
+                position: absolute;
+                top: 200px;
+                left: 20px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+
+            #bx4 > #bx4_info2 {
+                position: absolute;
+                top: 270px;
+                left: 20px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+
+            #bx4 > #bx4_info3 {
+                position: absolute;
+                top: 310px;
+                left: 20px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+
+            #bx4 > #bx4_info4 {
+                position: absolute;
+                top: 350px;
+                left: 20px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+
+            #bx4 > #testest {
+                position: absolute;
+                top: 350px;
+                left: 40px;
+                text-align: left;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 0px;
+                color: #707070;
+                opacity: 1;
+            }
+
+        #bt_be {
+            position: absolute;
+            top: 590px;
+            left: 12px;
+            width: 135px;
+            height: 50px;
+            background: #3BA1D5 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+            text-align: center;
+            font: normal normal bold 30px/35px NanumSquareRound;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        #bt_ne {
+            position: absolute;
+            top: 590px;
+            left: 165px;
+            width: 135px;
+            height: 50px;
+            background: #3BA1D5 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+            text-align: center;
+            font: normal normal bold 30px/35px NanumSquareRound;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+        #TITLE{
+                        position: absolute;
+                        top: 95px;
+                        height: 34px;
+                        text-align: center;
+                        font-family: 'NanumSquareRound',sans-serif;
+                        font-weight: 700;
+                        font-size: 35px;
+                        letter-spacing: 0px;
+                        color: #FFFFFF;
+                        opacity: 1;
+                    }
+
+                    #TITLE > #FIRST1{
+                        position: absolute;
+                        left: 1218px;
+                        width: 140px;
+                    }
+                    #TITLE > #FIRST2{
+                        position: absolute;
+                        left: 1392px;
+                        width: 160px;
+                    }
+                    #TITLE > #FIRST{
+                        position: absolute;
+                        left: 1586px;
+                        width: 140px;
+                    }
+                    #TITLE > #SECOND{
+                        position: absolute;
+                        left: 1760px;
+                        width: 129px;
+                    }
+    </style>
+</head>
+<body>
+  <div id="app">
+  <header class ="TOP">
+              <div id="TITLE">
+                  <div id ="FIRST" type ="button" onclick="Toregister()">예약하기</div>
+                  <script type="text/javascript">
+                  function Toregister(){
+                      location.href = "/reservation";
+                  }
+                  </script>
+                  <!-- <a id ="FIRST2" href = "/mypage/<%= currentUser.USER_ID %>">마이페이지</a> -->
+                  <div id="FIRST2" type ="button" onclick="Tomypage()">마이페이지</div>
+                  <script type="text/javascript">
+                   function Tomypage(){
+                       location.href = "/mypage/<%= currentUser.USER_ID %>";
+                   }
+                   </script>
+                    <div id ="FIRST1" type ="button" onclick="Tosnacklist()">스낵구매</div>
+                    <script type="text/javascript">
+                    function Tosnacklist(){
+                        location.href = "/snack/<%= currentUser.USER_ID %>";
+                    }
+                    </script>
+                  <div id="SECOND" type ="button" onclick="Tologin()">로그아웃</div>
+                  <script type="text/javascript">
+                      function Tologin(){
+                          location.href = "/logout";
+                        }
+                  </script>
+              </div>
+           </header>
+  <form action="/reservation/reservation_pay/<%= currentUser.USER_ID %>" onsubmit = 'return print_seat(this , "<%=people_count%>")' method="post">
+    <div id="title">예매하기</div>
+    <div id="CENTER">
+    </div>
+    <div id="bx1">
+        <div id="bx1_bx1">
+            <div id="bx1_bx1_tx1" style="font: normal normal bold 30px/35px NanumSquareRound; color: #FFFFFF;">좌석선택</div>
+        </div>
+        <div id="bx1_bx2" style="font: normal normal normal 30px/36px NanumGothicCoding; color: #000000;">SCREEN</div>
+        <table width="500px" height="300px"  style = "position:absolute; top:180px; left:260px;">
+          <% row.forEach(function(item, index1){ %>
+          <tr>
+            <% col.forEach(function(item, index2){ %>
+              <th>
+                  <% if ( use_check[6*index1 + index2].SEAT_USE_CHECK == 'N') { %>
+                    <input type="button" onclick='javascript:check_seat("<%= people_count %>","<%= rows[6*index1 + index2].SEAT_ROW %>","<%= cols[6*index1 + index2].SEAT_COL %>","<%= 6*index1 + index2%>")' style="width:50px; height:50px; background:gray;" id=<%= 6*index1+index2 %>>
+                    <input type="hidden" name ="seat_rows" value = <%= rows[6*index1+index2].SEAT_ROW %> >
+                    <input type="hidden" name ="seat_cols" value = <%= cols[6*index1+index2].SEAT_COL %> >
+                    <input type ="hidden" id="use" name ="seat_use_check" value ="<%= use_check[6*index1 + index2].SEAT_USE_CHECK %>">
+                  <% } else { %>
+                    <input type="button" id="reserve2" style="width:50px; height:50px; background:#FF6F00;">
+                  <% } %>
+              </th>
+
+            <% }); %>
+          </tr>
+          <% }); %>
+        </table>
+      </div>
+        <script type="text/javascript">
+
+          //var flag = false;
+
+          var xx = new Array();
+          var yy = new Array();
+          var count = 0; //버튼누른 횟수 저장
+          var num;
+
+          function check_seat(people_count, row, col ,id) {
+            console.log(people_count);
+            var x = row;
+            var y = col;
+            num = Number(people_count);
+            //var x = document.getElementById('rows');
+
+            //if ($("#"+id).attr('disabled') == true) {
+              //for(var i=0; i<count; i++) {
+                //if (xx[i] == row & yy[i] == col) {
+                  //xx.slice(i);
+                //  yy.slice(i);
+                //}
+              //}
+
+              //$("#"+id).css({ background:gray });
+              //$("#"+id).prop("disabled", false);
+            //}
+            if (count < people_count) {
+
+              if (confirm('좌석을 예약하시겠습니까?')) {
+                  //$(this).off('click');
+                  //alert(clicked_seat+" 을 선택하였습니다.");
+                  //alert('['+x+','+y+']');
+
+                    //배열에 값 주입
+                    var idr = Number(id)+1000;
+                    var idc = Number(id)+10000;
+                       xx[count] = x;
+                    yy[count] = y;
+                  //$('[name="test"]')[count].val(x);
+                  $("#"+id).css({ background:"#FF6F00"});
+                  $("#"+id).prop("disabled", true);
+
+                  //$("#"+idr).val("["+x+", "+y+"]");
+                  //$("#"+idr).css({ position:absolute;});
+                  //$("#"+idr).css("left", '(120+(count+1)*50)px');
+                  //$("#"+idc).val("["+x+", "+y+"]");
+                  //$("#"+idr).text("["+x+", "+y+"]").val();
+                  //$("#"+idc).text("["+x+", "+y+"]").val();
+                  //$("#bx4_info5").val().show();
+
+                  for (i=0; i<=count; i++) {
+                    $("#testest").text("["+xx[i]+", "+yy[i]+"]");
+                  }
+
+                  if(count == people_count -1 ){
+                    $("#test").val(xx);
+                    //var h = $("#test").val();
+                    //console.log(h);
+                    $("#test2").val(yy);
+                  }
+                  count++;
+                  //$("#seat_col").val(y);
+                  //$(id="reserve").off( clicked_seat );
+                  return;
+                  //if (maxAppend >= 3) return;
+                  //document.form.submit();
+                  //this.style.backgroundColor = color(#000000);
+                  //console.log(x.value);
+
+              } else {
+                  alert('취소되었습니다.');
+              }
+            }
+            else {
+              alert('횟수를 초과하였습니다.');
+
+            }
+          }
+
+        function print_seat(Object, num1){
+
+           var num = Number(num1);
+            var seat = '';
+            if(num != xx.length){
+              alert("좌석이 다 선택되지 않았습니다!");
+              return false;
+
+            }
+            else{
+
+            for ( i = 0; i < xx.length ; i ++ ){
+              seat += "["+xx[i]+", ";
+              seat += yy[i];
+              seat += '] '
+            }
+              alert("선택한 좌석은 " +seat+" 입니다" );
+              return true;
+            }
+
+        }
+
+
+        </script>
+    <div id="bx2">
+        <div id="bx2_bx1"></div>
+        <div id="bx2_tx1" style="font-family: NanumSquareRound; font-size: 25px; color: #000000;">선택가능</div>
+        <div id="bx2_bx2"></div>
+        <div id="bx2_tx2" style="font-family: NanumSquareRound; font-size: 25px; color: #000000;">선택완료</div>
+    </div>
+    <div id="bx4">
+          <div id="bx4_info1">영화 <%= movie_title %></div>
+          <div id="bx4_info2">날짜 <%= screen_date %></div>
+          <div id="bx4_info3">인원 성인 <%= adults %> 청소년 <%= kids %></div>
+          <div id="bx4_info4">좌석 <span id="testest"></span></div>
+
+      
+        <button href="/reservation2/<%= currentUser.USER_ID %>" id="bt_be">이전단계</button>
+
+        <button class="btn" type="submit" id="bt_ne">다음단계</button>
+    </div>
+    <input type="hidden" name="schedule" value="<%= schedule_num %>">
+    <input type="hidden" name="adults" value="<%= adults %>">
+    <input type="hidden" name="kids" value="<%= kids %>">
+    <input type="hidden" name="movie_title" value="<%= movie_title %>">
+    <input type="hidden" name="screen_date" value="<%= screen_date %>">
+    <input type ="hidden" name="test" id="test">
+    <input type ="hidden" id ="test2" name="test2">
+  </form>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js"></script>
+  </div>
+</body>
+</html>

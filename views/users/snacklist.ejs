@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+		<title>snacklist</title>
+       
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+       <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+       <style>
+            body {
+                    background: #E9E9E9
+            }
+            #CENTER{ position: absolute;
+                top: 250px;
+                left: 352px;
+                width: 1460px;
+                height: 1200px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #707070;
+                opacity: 1;
+                overflow: auto;
+            }
+
+            #box{
+                width : 100px;
+                height: 30px;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 600px;
+                color: #000000;
+                font-size: 20px;
+            }
+            #TITLE{
+                position: absolute;
+                top: 95px;
+                height: 34px;
+                text-align: center;
+                font-family: 'NanumSquareRound',sans-serif;
+                font-weight: 700;
+                font-size: 35px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+            #TITLE > #FIRST1{
+                position: absolute;
+                left: 1218px;
+                width: 140px;
+            }
+            #TITLE > #FIRST2{
+                position: absolute;
+                left: 1392px;
+                width: 160px;
+            }
+            #TITLE > #FIRST{
+                position: absolute;
+                left: 1586px;
+                width: 140px;
+            }
+            #TITLE > #SECOND{
+                position: absolute;
+                left: 1760px;
+                width: 129px;
+            }
+            
+            .head_icon > span{
+                font-family: 'Oswald', sans-serif;;
+                font-weight: 700;
+                font-size: 70px;
+                color:#fad87b;
+            }
+            .head_icon > span:nth-child(1){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(2){
+                color:#fac042;
+            }
+            .head_icon > span:nth-child(3){
+                color:#e9a719;
+            }
+            .head_icon > span:nth-child(4){
+                color:#fac042;
+            }
+        </style>
+    </head>
+    <body>
+        <header class ="TOP">
+            <div id="TITLE">
+                <div id ="FIRST" type ="button" onclick="Toregister()">예약하기</div>
+                <script type="text/javascript">
+                function Toregister(){
+                    location.href = "/reservation2";
+                }
+                </script>
+                <!-- <a id ="FIRST2" href = "/mypage/<%= currentUser.USER_ID %>">마이페이지</a> -->
+                <div id="FIRST2" type ="button" onclick="Tomypage()">마이페이지</div>
+                <script type="text/javascript">
+                 function Tomypage(){
+                     location.href = "/mypage/<%= currentUser.USER_ID %>";
+                 }
+                 </script>
+                  <div id ="FIRST1" type ="button" onclick="Tosnacklist()">스낵구매</div>
+                  <script type="text/javascript">
+                  function Tosnacklist(){
+                      location.href = "/snack/<%= currentUser.USER_ID %>";
+                  }
+                  </script>
+                <div id="SECOND" type ="button" onclick="Tologin()">로그아웃</div>
+                <script type="text/javascript">
+                    function Tologin(){
+                        location.href = "/logout";
+                      }
+                </script> 
+            </div>
+         </header>
+            <div class = "title" style="position: absolute;top: 218px;left: 151px; width: 284px; height: 50px;">바로스낵</div>
+            <div id = "CENTER"> 
+                <table style="table-layout : fixed; position: absolute; top:50px; left: 80px">
+                 <tr class = table1 style="height: 50px;">
+                     <th colspan="2">콤보</th>
+                 </tr >
+                 <tr style="height: 50px;" >
+                    <form method="post">                    
+                    <th rowspan="3"><img src="/image/1.png" width="180"></th>
+                    <% combo_result.forEach(function(item,index){ %> 
+                    <th class = table5><%= item.SNACK_NAME %></th>     
+                    <% }); %>              
+                </tr >
+                <tr style="height: 50px;">
+                    <% combo_result.forEach(function(item,index){ %> 
+                    <th class = table5><%= item.SNACK_PRICE %> 원</th>
+                    <% }); %>   
+                </tr>
+                <tr style="height: 70px;">
+                    <th class = table5> 
+                        <div>수량 : <input style ="width: 70px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num1" name ="num"></div>
+                    <input type ="hidden" name="snack_num" value="1">
+                    <input type ="hidden" name="snack_price" value="9000">
+                    <input class = "BUTTON1" type = "submit" onclick="message1()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                    <script type ="text/javascript">
+                        function message1(){
+                            var num = document.getElementById("num1").value;
+                            alert("콤보" +num +"개를 장바구니에 담았습니다." );
+
+                        }
+                        </script>      
+                 </form> 
+                     
+                    </th>
+                </tr>
+             </table>
+             <table style="table-layout : fixed; position: absolute; top:300px; left: 80px">
+                <tr class = table1 style="height: 50px;">
+                    <th colspan="4">팝콘</th>
+                </tr >
+                <tr style="height: 50px;" >
+                   <th rowspan="3"><img src="/image/2.png" width="180"></th>
+                   <% con_result.some(function(item,index){ %> 
+                   <th class = table5><%= item.SNACK_NAME %></th> 
+                   <% return index ==0; }); %>  
+                   <th rowspan="3"><img src="/image/3.png" width="180"></th> 
+                   <% con_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[1].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>                   
+               </tr>
+               <tr style="height: 50px;">
+                <% con_result.forEach(function(item,index){ %> 
+                   <th class = table5><%= item.SNACK_PRICE %> 원</th>
+                <% }); %>
+               </tr>
+               <tr style="height: 70px;">
+                <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 70px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num2" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="2">
+                        <input type ="hidden" name="snack_price" value="5000">
+                        <input class = "BUTTON1" type = "submit" onclick="message2()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message2(){
+                                var num = document.getElementById("num2").value;
+                                alert("팝콘(L)" +num +"개를 장바구니에 담았습니다." );
+    
+                            }
+                            </script>      
+                    </form> 
+                </th>
+                <th class = table5>
+                    <form method="post">
+                    <div>수량 : <input style ="width: 70px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num3" name ="num"></div>
+                    <input type ="hidden" name="snack_num" value="3">
+                    <input type ="hidden" name="snack_price" value="4500">
+                    <input class = "BUTTON1" type = "submit" onclick="message3()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                    <script type ="text/javascript">
+                        function message3(){
+                            var num = document.getElementById("num3").value;
+                            alert("팝콘(M)" +num +"개를 장바구니에 담았습니다." );
+
+                        }
+                        </script>      
+                    </form> 
+                </th>
+            </tr>
+            </table>
+            <table style="table-layout : fixed; position: absolute; top:550px; left: 80px">
+                <tr class = table1 style="height: 50px;">
+                    <th colspan="8">음료</th>
+                </tr >
+                <tr style="height: 50px;" >
+                   <th rowspan="3"><img src="/image/4.png" width="180"></th>
+                   <% beverage_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[0].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>                  
+                   <th rowspan="3"><img src="/image/5.png" width="180"></th>
+                   <% beverage_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[1].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>        
+                   <th rowspan="3"><img src="/image/6.png" width="180"></th>
+                   <% beverage_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[2].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>                         
+                   <th rowspan="3"><img src="/image/7.png" width="180"></th>
+                   <% beverage_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[3].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>        
+               </tr >
+               <tr style="height: 50px;">
+                <% beverage_result.forEach(function(item, index){ %> 
+                    <th class = table5><%= item.SNACK_PRICE %> 원</th>
+                 <% }); %>
+               </tr>
+               <tr style="height: 70px;">
+                   <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num4" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="4">
+                        <input type ="hidden" name="snack_price" value="2500">
+                        <input class = "BUTTON1" type = "submit" onclick="message4()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message4(){
+                                var num = document.getElementById("num4").value;
+                                alert("탄산음료(M)" +num +"개를 장바구니에 담았습니다." );
+    
+                            }
+                        </script>      
+                    </form> 
+                   </th>
+                   <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num5" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="5">
+                        <input type ="hidden" name="snack_price" value="3000">
+                        <input class = "BUTTON1" type = "submit" onclick="message5()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message5(){
+                                var num = document.getElementById("num5").value;
+                                alert("탄산음료(L)" +num +"개를 장바구니에 담았습니다." );
+    
+                            }
+                        </script>      
+                    </form> 
+                   </th>
+                   <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num6" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="6">
+                        <input type ="hidden" name="snack_price" value="3500">
+                        <input class = "BUTTON1" type = "submit" onclick="message6()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message6(){
+                                var num = document.getElementById("num6").value;
+                                alert("아메리카노(HOT)" +num +"개를 장바구니에 담았습니다." );
+    
+                            }
+                        </script>      
+                    </form> 
+                </th>
+                <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num7" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="7">
+                        <input type ="hidden" name="snack_price" value="4000">
+                        <input class = "BUTTON1" type = "submit" onclick="message7()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message7(){
+                                var num = document.getElementById("num7").value;
+                                alert("아메리카노(ICE)" +num +"개를 장바구니에 담았습니다." );
+    
+                            }
+                        </script>      
+                    </form> 
+                </th>
+               </tr>
+            </table>
+            <table style="table-layout : fixed; position: absolute; top:830px; left: 80px">
+                <tr class = table1 style="height: 50px;">
+                    <th colspan="8">스낵</th>
+                </tr >
+                <tr style="height: 50px;" >
+                   <th rowspan="3"><img src="/image/8.png" width="170"></th>
+                   <% snack_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[0].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>                     
+                   <th rowspan="3"><img src="/image/9.png" width="170"></th>
+                   <% snack_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[1].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>  
+                   <th rowspan="3"><img src="/image/10.png" width="170"></th>
+                   <% snack_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[2].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>                    
+                   <th rowspan="3"><img src="/image/11.png" width="170"></th>
+                   <% snack_result.some(function(item,index,array){ %> 
+                    <th class = table5><%= array[3].SNACK_NAME %></th> 
+                    <% return index ==0; }); %>  
+               </tr >
+               <tr style="height: 50px;">
+                <% snack_result.forEach(function(item, index){ %> 
+                    <th class = table5><%= item.SNACK_PRICE %> 원</th>
+                 <% }); %>
+               </tr>
+               <tr style="height: 70px;">
+                <th class = table5>
+                <form method="post">
+                    <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num8" name ="num"></div>
+                    <input type ="hidden" name="snack_num" value="8">
+                    <input type ="hidden" name="snack_price" value="4900">
+                    <input class = "BUTTON1" type = "submit" onclick="message8()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                    <script type ="text/javascript">
+                        function message8(){
+                            var num = document.getElementById("num8").value;
+                            alert("칠리치즈나쵸" +num +"개를 장바구니에 담았습니다." );
+                        }
+                    </script>      
+                </form> 
+                   </th>
+                   <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num9" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="9">
+                        <input type ="hidden" name="snack_price" value="4000">
+                        <input class = "BUTTON1" type = "submit" onclick="message9()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message9(){
+                                var num = document.getElementById("num9").value;
+                                alert("플레인핫도그" +num +"개를 장바구니에 담았습니다." );
+                            }
+                        </script>      
+                    </form> 
+                   </th>
+                   <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num10" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="10">
+                        <input type ="hidden" name="snack_price" value="4500">
+                        <input class = "BUTTON1" type = "submit" onclick="message10()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message10(){
+                                var num = document.getElementById("num10").value;
+                                alert("칠리치즈핫도그" +num +"개를 장바구니에 담았습니다." );
+                            }
+                        </script>      
+                    </form> 
+                </th>
+                <th class = table5>
+                    <form method="post">
+                        <div>수량 : <input style ="width: 50px; height: 20px; margin-bottom: 5px;" type ="number" min="1" id ="num11" name ="num"></div>
+                        <input type ="hidden" name="snack_num" value="11">
+                        <input type ="hidden" name="snack_price" value="3500">
+                        <input class = "BUTTON1" type = "submit" onclick="message11()" style ="width: 100px; height: 30px;font-size: 20px; margin-top: 10px;" value="장바구니">
+                        <script type ="text/javascript">
+                            function message11(){
+                                var num = document.getElementById("num11").value;
+                                alert("오징어(완제품)" +num +"개를 장바구니에 담았습니다." );
+                            }
+                        </script>      
+                    </form> 
+                </th>
+               </tr>
+            </table>   
+            <BUTTON class="BUTTON1" onclick ="Tosnackbag()" style="position:absolute; left:1200px; top:1100px; width: 200px; height: 40px;font-size: 30px; margin-top: 10px;">장바구니 가기</BUTTON>   
+            <script type="text/javascript">
+            function Tosnackbag(){
+                location.href ="/snack/snack_bag/<%= currentUser.USER_ID %>";
+            }
+            </script>        
+         </div>
+         </div>
+    </body>
+</html>
